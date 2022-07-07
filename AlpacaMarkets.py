@@ -101,6 +101,7 @@ class TradingAPI:
     def PortfolioHistory(self, *, period='1M', timeframe='1D', to_csv=False) -> pd.DataFrame:
         """
         Return portolio history data in pandas dataframe (earliest start is start of portfolio)
+        :param str period: 
         """
         data = {
             "period": period,
