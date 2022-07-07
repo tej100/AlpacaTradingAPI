@@ -1,10 +1,10 @@
 # Import class from AlpacaMarkets and API keys from secret file
 # Warning: this code will execute orders on your portfolio if you have connected an active API key
 from AlpacaMarkets import TradingAPI
-from secret_tokens import AlpacaPaper_KeyID, AlpacaPaper_SecretKey
+from secret_tokens import Alpaca_KeyID, Alpaca_SecretKey
 
 # Initialize class object with your alpaca portfolio's api keys
-AlpTrading = TradingAPI(AlpacaPaper_KeyID, AlpacaPaper_SecretKey)
+AlpTrading = TradingAPI(Alpaca_KeyID, Alpaca_SecretKey)
 
 # Get information on the account settings and preferences
 print(AlpTrading.GetAccount())
