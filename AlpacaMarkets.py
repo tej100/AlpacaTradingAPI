@@ -109,6 +109,7 @@ class TradingAPI:
         }
         r = requests.get(self.PORTFOLIO_URL, params=data, headers=self.HEADERS)
         port_hist = pd.DataFrame(json.loads(r.content))
+        port_hist['timestamp'] = pd.to_datetime(port_hist['timestamp'], unit='s')
         port_hist.set_index('timestamp', inplace=True)
         port_hist = port_hist[port_hist['equity'] != 0]
 
