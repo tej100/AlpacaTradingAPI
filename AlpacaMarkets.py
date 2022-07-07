@@ -35,6 +35,8 @@ class TradingAPI:
         """
         limit_price = str(limit_price)
         trail_percent = str(trail_percent)
+        type = type.lower()
+        time_in_force = time_in_force.lower()
 
         if type == 'limit':
             data = {
